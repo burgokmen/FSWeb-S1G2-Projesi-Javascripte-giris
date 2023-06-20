@@ -159,7 +159,8 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 */
 
 function milDonusturucu(kmValue) {
-  return kmValue / 1.609;
+  const value = (kmValue / 1.609344);
+  return parseFloat(value.toFixed(5));
 }
 
 //Görev 4b - Santimetreden Feet
@@ -191,7 +192,7 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 
 
 function cocukSarkisi(sayı) {
-  console.log(`${sayı} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`);
+  return `${sayı} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
 }
 
 for(let i=5; i > 0 ; i-- ){
