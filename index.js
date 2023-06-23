@@ -22,10 +22,10 @@ Aşağıdakileri yap:
 */
 
 let surucuYasi = 33;
-if (surucuYasi>18) {
-  console.log('true')
+if (surucuYasi > 18) {
+  console.log("true");
 } else {
-  console.log('false')
+  console.log("false");
 }
 
 /*
@@ -43,9 +43,9 @@ Aşağıdakileri yap:
 let firstValue = 3;
 let secondValue = 5;
 if (firstValue < secondValue) {
-  firstValue = firstValue * 2
+  firstValue = firstValue * 2;
 }
-console.log(firstValue)
+console.log(firstValue);
 
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
@@ -58,10 +58,9 @@ Aşağıdakileri yap:
    İPUCU: Number metoduna bakabilirsin
 */
 
-let thirdValue = '1999';
+let thirdValue = "1999";
 Number(thirdValue);
-console.log(thirdValue)
-
+console.log(thirdValue);
 
 /*
 Görev 1d - Çarpma
@@ -73,10 +72,10 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamla:
 */
 
 function carpma(a, b) {
-  return a*b
+  return a * b;
 }
 
-console.log(carpma(7,4));
+console.log(carpma(7, 4));
 
 /* Görev 2 : Köpeğin Yaşı */
 
@@ -88,7 +87,7 @@ Aşağıdakileri yap:
  */
 
 function kopeginYasi(num) {
-  return num * 7
+  return num * 7;
 }
 
 /* Görev 3 */
@@ -105,14 +104,15 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yap.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
-
-
 function oyun(oyuncu, bilgisayar) {
-  if(oyuncu == bilgisayar){
+  if (oyuncu == bilgisayar) {
     return "Beraberlik";
-  } else if ((oyuncu == "Taş" && bilgisayar == "Makas") || (oyuncu == "Makas" && bilgisayar == "Kağıt" ) || (oyuncu == "Kağıt" && bilgisayar == "Taş" )){
+  } else if (
+    (oyuncu == "Taş" && bilgisayar == "Makas") ||
+    (oyuncu == "Makas" && bilgisayar == "Kağıt") ||
+    (oyuncu == "Kağıt" && bilgisayar == "Taş")
+  ) {
     return "Kazandın!";
-
   } else {
     return "Kaybettin!";
   }
@@ -134,19 +134,17 @@ function oyun(oyuncu, bilgisayar) {
 */
 
 function bilgisayarinSecimi(bilgi) {
-  bilgi=Math.random();
-  if (bilgi > 0.66)  {
+  bilgi = Math.random();
+  if (bilgi > 0.66) {
     return "Taş";
-  } else if (bilgi> 0.33) {
+  } else if (bilgi > 0.33) {
     return "Makas";
   } else {
     return "Kağıt";
   }
-
 }
 
-console.log(oyun("Taş",bilgisayarinSecimi()))
-
+console.log(oyun("Taş", bilgisayarinSecimi()));
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -159,7 +157,7 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 */
 
 function milDonusturucu(kmValue) {
-  const value = (kmValue / 1.609344);
+  const value = kmValue / 1.609344;
   return parseFloat(value.toFixed(5));
 }
 
@@ -190,12 +188,11 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-
 function cocukSarkisi(sayı) {
   return `${sayı} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
 }
 
-for(let i=5; i > 0 ; i-- ){
+for (let i = 5; i > 0; i--) {
   cocukSarkisi(i);
 }
 
@@ -215,20 +212,19 @@ Aşağdakileri notHesapla fonksiyonunda yap.
 */
 
 function notHesapla(valss) {
-  if (valss > 100){
+  if (valss > 100) {
     return undefined;
-  } else if (valss > 89){
-    return 'A aldın';
-  } else if ( valss > 79) {
-    return 'B aldın';
-  } else if ( valss > 69) {
-    return 'C aldın';
-  } else if ( valss > 59) {
-    return 'D aldın';
+  } else if (valss > 89) {
+    return "A aldın";
+  } else if (valss > 79) {
+    return "B aldın";
+  } else if (valss > 69) {
+    return "C aldın";
+  } else if (valss > 59) {
+    return "D aldın";
   } else {
-    return 'F aldın';
+    return "F aldın";
   }
-
 }
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
